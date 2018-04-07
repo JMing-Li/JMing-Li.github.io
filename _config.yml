@@ -1,12 +1,12 @@
 # Site settings
 title: JM's Blog
-SEOTitle: (゜-゜)つロ | JM's Blog
+SEOTitle: Hi| JM's Blog
 header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: "Bio Dog"
 keyword: "#"
-url: "#"              # your host, for absolute URL
-baseurl: "#"                             # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://jming-li.github.io"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
