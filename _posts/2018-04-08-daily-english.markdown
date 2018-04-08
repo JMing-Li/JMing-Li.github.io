@@ -4,7 +4,7 @@ title:      "Daily Reading 1"
 subtitle:   ""
 date:       2018-04-08
 author:     "JM"
-header-img: "img/post-bg-daily-eng.jpg"
+header-img: "img/post-bg-donkey.jpg"
 catalog: true
 tags:
     - Daily Reading

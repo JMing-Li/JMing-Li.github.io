@@ -4,7 +4,7 @@ title:      "Hello python3"
 subtitle:   "Python3 Cookbook notes"
 date:       2018-04-08
 author:     "JM"
-header-img: "img/post-bg-2015.jpg"
+header-img: "img/post-bg-horse.jpg"
 catalog: true
 tags:
     - Python3 Cookbook
