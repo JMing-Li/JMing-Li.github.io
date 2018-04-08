@@ -2,10 +2,10 @@
 title: JM's Blog
 SEOTitle: Hi| JM's Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
+email: sjtu.lijm@gmail.com
 description: "Bio Dog"
 keyword: "#"
-url: "https://jming-li.github.io"              # your host, for absolute URL
+url: "http://127.0.0.1:4000"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -25,7 +25,7 @@ github_username:    JMing-Li
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 4 
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
@@ -48,7 +48,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: disqus_nFuOWzzDtC
 
 # Netease setttings
 netease_comment: false
@@ -60,14 +60,14 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+#ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+#ga_domain: huangxuan.me
 
 
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Decoing life"
+sidebar-about-description: "Decoding life..."
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
