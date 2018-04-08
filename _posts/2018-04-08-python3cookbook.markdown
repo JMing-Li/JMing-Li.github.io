@@ -7,7 +7,7 @@ author:     "JM"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
 tags:
-    - python
+    - Python3 Cookbook
 ---
 
  
