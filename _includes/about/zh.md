@@ -1,10 +1,12 @@
-> 种过拟南芥和大豆   :herb:
+>God encoded life with DNA, but now we are trying to decode it.
 
-> 养过原核菌及酵母   :beer:
+ 种过拟南芥和大豆   :herb:
 
-> 生物信息了解一下？ :koala:
+ 养过原核菌及酵母   :beer:
 
-> 当前专注于敲代码   :trollface:
+ 生物信息了解一下？ :koala:
+
+ 当前专注于敲代码   :trollface:
 
 
 
