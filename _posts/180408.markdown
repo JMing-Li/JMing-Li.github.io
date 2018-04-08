@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Hello python3"
-subtitle:   " \"Hello World, Hello Python3\""
+subtitle:   "Python3 Cookbook 笔记"
 date:       2018-04-08
 author:     "JM"
 header-img: "img/post-bg-2015.jpg"
