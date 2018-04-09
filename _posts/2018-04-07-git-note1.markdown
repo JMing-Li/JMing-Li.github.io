@@ -1,0 +1,81 @@
+---
+layout:     post
+title:      "Git Note 1"
+subtitle:   "Git学习笔记"
+date:       2018-04-07
+author:     "JM"
+header-img: "img/post-bg-leopard.jpg"
+catalog: true
+tags:
+    - Git
+    - 2018-04
+---
+
+## 从远程取回文件
+
+问题： 从github网页创建了新文件，（或者别人贡献的新文件），如何从远程的repo取回到本地
+
+远程repo master分支新建了add-from-web.md ,本地repo的master分支需要与远程同步:
+
+本地master分支查看不到新文件,远程origin/master也看不到：
+
+```
+$ git ls-tree --name-only master
+testfile.md
+
+$ git ls-tree --name-only origin/master
+testfile.md
+```
+
+先fetch最新的远程repo的所有分支：
+
+```
+$ git fetch
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From github.com:JMing-Li/learn-git
+   1a452b2..588de21  master     -> origin/master
+
+$ git ls-tree --name-only origin/master
+add-from-web.md
+testfile.md
+```
+
+fetch之后的远程origin/master就包含了新文件，checkout取回新文件：
+```
+$ git checkout origin/master add-from-web.md
+$ ls
+add-from-web.md  testfile.md
+```
+
+此时文件已经同步完成，本地master需要pull完成分支同步：
+```
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   add-from-web.md
+
+$ git pull
+Updating 1a452b2..588de21
+Fast-forward
+ add-from-web.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 add-from-web.md
+
+```
+这时文件和分支都同步完成
+```
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+```
+
+
+
+
