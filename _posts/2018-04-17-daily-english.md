@@ -11,7 +11,7 @@ tags:
     - 2018-04
 ---
 
-##Disgraced former South Korean president gets 24 years in prison on corruption charges
+## Disgraced former South Korean president gets 24 years in prison on corruption charges
 
 Former South Korean president Park Geun-hye was Friday sentenced to 24 years in prison - effectively for the rest of the 66-year-old's life - after being found guilty of charges including bribery, coercion and abuse of power.
 
