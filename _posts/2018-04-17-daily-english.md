@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Daily Reading 1"
+title:      "Daily Reading 04-16"
 subtitle:   "Save my poor English"
-date:       2018-04-17
+date:       2018-04-16
 author:     "JM"
 header-img: "img/post-bg-donkey.jpg"
 catalog: true
