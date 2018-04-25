@@ -2,9 +2,9 @@
 layout:     post
 title:      "Python3 迭代器 生成器"
 subtitle:   "python3 学习笔记"
-date:       2018-04-25 12:00:00
+date:       2018-04-26 12:00:00
 author:     "JM"
-header-img: "img/post-bg-simple.jpg"
+header-img: "img/post-bg-simple2.jpg"
 tags:
     - Python3 
     - 2018-04
