@@ -4,7 +4,7 @@ title:      "Python3 Cookbook char1-b"
 subtitle:   "python3 cookbook 学习笔记"
 date:       2018-04-25 12:00:00
 author:     "JM"
-header-img: "img/post-bg-simple.png"
+header-img: "img/post-bg-simple.jpg"
 tags:
     - Python3 Cookbook
     - 2018-04
