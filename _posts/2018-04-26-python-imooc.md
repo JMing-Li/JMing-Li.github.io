@@ -16,15 +16,15 @@ tags:
 
 iterable :  
   - 可以迭代的对象（比如字符，文件），
-  - 有 __iter__ method 能返回 iterator， 或者有__getitem__ method.相当于容器。
+  - 有__iter__method 能返回 iterator， 或者有__getitem__ method.相当于容器。
 
 iterator :  
-- 在迭代中记住状态，
- - 有 __next__ method
- - 能返回下一个值，
- - 能更新状态指向下一值，
- - 当完成所有迭代时 raise StopIteration.
-- 自身 self-iterable (自身有__iter__ method返回self)。
+  - 在迭代中记住状态，
+    - 有__next__method
+    - 能返回下一个值，
+    - 能更新状态指向下一值，
+    - 当完成所有迭代时 raise StopIteration.
+  - 自身 self-iterable (自身有__iter__ method返回self)。
     
 Note：  
 - __next__ method 在python2 为 next method
