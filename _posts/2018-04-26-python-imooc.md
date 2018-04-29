@@ -27,7 +27,7 @@ iterator :
   - 自身 self-iterable (自身有__iter__ method返回self)。
     
 Note：  
-- __next__ method 在python2 为 next method
+- /_/_next/_/_ method 在python2 为 next method
 - The builtin function next() calls that method on the object passed to it.
 
 
