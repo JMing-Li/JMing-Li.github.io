@@ -27,7 +27,7 @@ iterator :
   - 自身 self-iterable (自身有__iter__ method返回self)。
     
 Note：  
-- /__next/__ method 在python2 为 next method
+- \__next\__ method 在python2 为 next method
 - The builtin function next() calls that method on the object passed to it.
 
 
@@ -70,9 +70,9 @@ for x in WeatherIterable([u'南京',u'苏州',u'扬州']): print(x)
     
 
 ### 3-3 生成器   
-yeild :使用生成器哈数实现可迭代对象  
+yeild :使用生成器函数实现可迭代对象  
 Q：  
-实现一个可迭代对象的类，它能够迭代出给定范围内的所以质数。  
+实现一个可迭代对象的类，它能够迭代出给定范围内的所有质数。  
 A：  
 将该类的__iter__ method实现成生成器，每次yield返回一个质数。
 
