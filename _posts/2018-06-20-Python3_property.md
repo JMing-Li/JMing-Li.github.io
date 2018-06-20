@@ -15,8 +15,7 @@ property可以给实例的attribute增加除了访问，修改之外的其他处
 
 ## 一、property的一个pure python实现
 
-property的一个pure python equivalent如下： 
-
+property的一个pure python equivalent如下：  
 包含**描述器部分**和**装饰器部分。**
 
 
@@ -70,13 +69,9 @@ class PProperty(object):
 ### 1，通过函数调用property
 
 通过 **property(fget=None, fset=None, fdel=None, doc=None)** 函数的方式调用property:  
-
 调用方法：  
-
 \_\_init\_\_ 设置内部attribute；  
-
 定义三个方法来操作内部attribute；  
-
 property()函数设置外部可访问的变量property.    
 
 
@@ -101,10 +96,8 @@ obj1 = C()
 
 **class C定义的时候，将property实际操纵的内部属性，操纵的3个方法，外部“马甲”变量，都打包在这里**
 
-这样class C就包含了一个可控制的外部变量: property x. 
-
+这样class C就包含了一个可控制的外部变量: property x.  
 property x 其实是内部attribute \_\_x的“马甲”.  
-
 property只是访问，修改，删除内部attribute的外部接口。实例\_\_dict\_\_中只有内部attribute:  
 
 
@@ -129,21 +122,24 @@ obj1.x = 101
     
 
 ![PProperty](https://github.com/JMing-Li/JMing-Li.github.io/raw/master/img/in-post/property.png)
-**赋值操作实现流程**：  
-上图描述出类PProperty,类C，以及实例obj1赋值后的关系。当实例obj1初始化时，obj1._C__x 值为100；  
-obj1.x = 1212    ## x为判断为 data descriptor
---> x.__set__(self, obj, value)  ==>  x.__set__(x,obj1,1212)  ## __set__的self是PProperty实例
---> print('Hi! It is descriptor set')
---> self.fset(obj, value) ==> x.fset(obj1,1212) ==> setx(obj1,1212)  ## setx的self是 class C实例
---> print('here is class c setx')
---> self.__x = value  ==>  obj1.__x = 1212  ==> Return value: None
---> self.fset(obj. value)执行完毕，修改值完成
 
-print(obj1.x)
---> x.__get__(self, obj, objtype) ==> x.__get__(x, obj1, None)
---> print('Hi! It is descriprot get')
---> self.fget(obj)  ==>  x.fget(obj1)  ==> getx(obj1) 
---> self.__x  ==>  obj1.__x 执行完毕.
+**赋值操作实现流程**：  
+上图描述出类PProperty,类C，以及实例obj1赋值后的关系。当实例obj1初始化时，obj1.\_C\_\_x 值为100；  
+
+obj1.x = 1212    ## x为判断为 data descriptor   
+--》 x.\_\_set\_\_(self, obj, value)  ==》  x.\_\_set\_\_(x,obj1,1212)  ## \_\_set\_\_的self是PProperty实例。   
+--》 print('Hi! It is descriptor set')  
+--》 self.fset(obj, value) ==》 x.fset(obj1,1212) ==》 setx(obj1,1212)  ## setx的self是 class C实例  
+--》 print('here is class c setx')  
+--》 self.\_\_x = value  ==》  obj1.\_\_x = 1212  ==》 Return value: None  
+--》 self.fset(obj. value)执行完毕，修改值完成.  
+
+print(obj1.x)  
+--》 x.\_\_get__(self, obj, objtype) ==》 x.\_\_get\_\_(x, obj1, None)  
+--》 print('Hi! It is descriprot get')  
+--》 self.fget(obj)  ==》  x.fget(obj1)  ==》 getx(obj1)   
+--》 self.\_\_x  ==》  obj1.\_\_x 执行完毕.  
+
 
 通过property()函数调用只用到了PProperty类的\_\_init\_\_部分和描述器部分，而用不到装饰器部分：  
 
@@ -169,7 +165,6 @@ del obj1.x
     
 
 而实例obj1中的另外一个普通属性y只可以通过obj1.y访问，无其他操作。  
-
 实例obj1还获得了property x 的\_\_doc\_\_ 信息：
 
 
@@ -213,7 +208,6 @@ help(obj1)
 ### 2，通过Syntactic Sugar调用property
 
 使用语法糖@实际使用的是PProperty类的装饰器部分先进行包装:  
-
 使用下面的语法，指定了PProperty()函数的fget, fset, fdel三个参数。
 
 
@@ -246,8 +240,7 @@ class CC:
     yo! decorator deleter
     
 
-定义class CC的时候就调用了装饰器部分进行包装。 
-
+定义class CC的时候就调用了装饰器部分进行包装。  
 装饰器getter方法没有调用，setter和deleter方法被调用 ？
 
 
@@ -297,7 +290,6 @@ p1.voltage
 ### 2，增加对attribute的检查
 
 当需要对attribute进行类型检查的时候:   
-
 设置\_first_name默认值为'NAME',当调用setter时检查是否为字符类型，并阻止删除该属性
 
 
@@ -342,7 +334,6 @@ p1.first_name
 
 
 如果想在实例初始化的时候就进行类型检查，对传入的参数进行检查：  
-
 注意 \_\_init\_\_部分：
 
 
