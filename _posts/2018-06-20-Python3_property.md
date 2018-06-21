@@ -121,7 +121,7 @@ obj1.x = 101
     here is class c setx
     
 
-![PProperty](https://github.com/JMing-Li/JMing-Li.github.io/raw/master/img/in-post/property.png)
+![PProperty](/img/in-post/property.png)
 
 **赋值操作实现流程**：  
 上图描述出类PProperty,类C，以及实例obj1赋值后的关系。当实例obj1初始化时，obj1.\_C\_\_x 值为100；  
